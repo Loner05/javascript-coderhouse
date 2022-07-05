@@ -1,0 +1,281 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+--light-gray: #d3d3d3;
+--nude-green:#2f4f4f;
+--nude-green-light:#bad6d6;
+--white: #ffffff;
+--black: #000000;
+--very-light-pink: #C7C7C7;
+--text-input-field: #F7F7F7;
+--hospital-green: #9be5aa;
+--sm: 14px;
+--md: 16px;
+--ld: 18px;
+
+}
+
+.menu{
+display:flex;
+flex-direction: row;
+
+
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 0 0 20% 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    white-space: nowrap;
+  }
+  
+  .menu li a:hover {
+    color: black;
+    border-bottom: 3px solid var(--blue-minhaus);
+    transition: all 0.5s ease-in;
+    background-color: #f6f8fb;
+  }
+  .menu li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: rgb(88, 86, 86);
+  }
+  
+  .menu li {
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  .menu-box img {
+    max-width:  10em;
+    margin-left: 15px;
+  
+  }
+  
+
+  .menu-box {
+  
+    align-items: center;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    background-color: var(--white);
+    width: 95%;
+    padding-top: 15px;
+    height: 3fr;
+    border-radius: 0.5rem;
+     /* z-index: 999; */
+    margin-left: 2%;
+    margin-right: 2%;
+  } 
+   
+
+  .shopping-cart-buttom  img{
+  width: 35px;
+  height: 35px;
+
+ 
+
+
+  }
+
+  /* .menu {
+    position: absolute;
+    right: 0;
+    margin-right: -80%;
+    transition: all 0.2s;
+    width: 70%;
+    height: 100%;
+  }
+
+  .menu a {
+    display: block;
+    background: white;
+    height: 100%;
+    z-index: 999;
+    margin-right: -80%;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    text-align: center;
+    justify-content: left;
+  }
+
+  #btn-menu:checked ~ .menu {
+    margin: 0;
+  }
+
+  .menu li a {
+    line-height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+  } */
+
+
+  .secondary-button{
+    border-radius: 8px;
+border: 2px solid var(--hospital-green);
+color: var(--hospital-green);
+height: 60px ;
+width: 100%;
+cursor: pointer;
+font-size: var(--md);
+font-weight: bold;
+background-color: var(--white);
+/* width: ; */
+
+}
+.primary-button{
+
+border-radius: 8px;
+border: none;
+color: var(--white);
+height: 60px ;
+width: 100%;
+cursor: pointer;
+font-size: var(--md);
+font-weight: bold;
+background-color: var(--hospital-green);
+}
+.cards-container{
+display: grid;
+grid-template-columns: repeat(auto-fill, 240px);
+gap:25px;
+place-content: center;
+}
+.product-card{
+width: 240px;
+}
+
+.product-card img{
+width: 240px;
+height: 240px;
+border-radius: 20px;
+object-fit:cover;
+}
+
+.product-info {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin-top: 12px;
+}
+
+
+.product-info figure img{
+width: 35px;
+height: 35px;
+}
+.product-info figure{
+margin: 0;
+}
+ .product-info div p:nth-child(1){
+font-weight: bold;
+font-size: var(--md);
+margin-top: 0;
+margin-bottom: 4px;
+
+ }
+ .product-info div p:nth-child(2){
+
+font-size: var(--sm);
+margin-top: 0;
+margin-bottom: 0;
+color: var(--very-light-pink);
+
+ }
+
+
+
+.filtro-menu{
+margin-top: 0;
+padding-top: 20%;
+padding-bottom: 3%;
+display: flex;
+justify-content:space-evenly ;
+}
+
+
+/*menu hamburguesa */
+
+
+
+
+
+.cart-card{
+position: absolute; 
+right: 0;
+height: 100%;
+width: 70%;
+background-color: #9be5aa;
+ /* margin-right: -80% */
+}
+
+
+.btnmenu:checked ~ .cart-card {
+   margin-right: -80% ;
+ 
+  background-color: #2f4f4f;
+}
+
+.icono-menu{
+  margin: 40px 50px;
+  position: relative;
+ 
+}
+
+.icono-menu img{
+  vertical-align: top;
+  width: 40px;
+  cursor: pointer;
+}
+
+/* Estilos para el contenedor del Menú */
+.cont-menu{
+  background-color: rgb(219, 219, 219);
+  box-shadow: 2px 0px 5px 2px rgb(66,66,66);
+  width: 400px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+ right: 0;
+  transition: all .5s ease;
+  z-index: 2;
+}
+
+/* Estilos por agregar en JavaScript */
+.active{
+  transform: translate(600px);
+}
+
+/* Estilos para el listado del Menú */
+.cont-menu ul{
+  padding: 100px 0px 20px 0px;
+  list-style: none;
+}
+
+.cont-menu ul li{
+  color: white;
+  display: block;
+  font-size: 25px;
+  text-decoration: none;
+  padding: 10px 50px;
+  cursor: pointer;
+}
+
+.cont-menu ul li:hover{
+  background-color: rgb(228,228,228);
+  color: rgb(42,42,42);
+}
+
+
